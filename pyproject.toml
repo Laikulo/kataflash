@@ -1,0 +1,8 @@
+
+[project]
+version = "0.0.0"
+name = "kataflash"
+
+[project.scripts]
+kataflashtool = "kataflash.upstream:invoke_raw"
+kataflash = "kataflash:main"
