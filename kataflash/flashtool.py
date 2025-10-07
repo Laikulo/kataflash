@@ -30,6 +30,12 @@ def invoke_args(*args: Sequence[str]):
 
 
 def invoke(*args):
+    """
+    Invoke the flashtool, and return.
+    This uses runpy, so global state is modified by the loader.
+    It may be desirable to do this in a subprocess or subinterpreter instead
+    This works by catching SystemExit, so it may violate some assumptions
+    """
     old_argv = sys.argv.copy()
     try:
         invoke_args(*args)
