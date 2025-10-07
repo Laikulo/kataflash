@@ -1,7 +1,12 @@
 KATAPULT_UPSTREAM = Arksine/katapult
 KATAPULT_REF = $(shell cat upstream_ref.txt)
+PYPROJECT_BUILD = pyproject-build
 
 all: kataflash/upstream/flashtool.py
+
+py: kataflash/upstream/flashtool.py kataflash/upstream/info.py
+	pyproject-build
+	
 
 
 kataflash/upstream/flashtool.py kataflash/upstream/info.py: upstream_ref.txt

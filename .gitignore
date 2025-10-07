@@ -1,3 +1,6 @@
 /kataflash/upstream/flashtool.py
 /kataflash/upstream/info.py
-./.venv
+/.venv
+/dist
+__pycache__/
+*.egg-info
