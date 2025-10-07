@@ -1,5 +1,6 @@
 import argparse
 from . import flashtool
+from . import util
 
 
 def main(args=None):
@@ -30,4 +31,4 @@ def cmd_default(args):
 
 
 def cmd_version(args):
-    print(f"This is Kataflash v0.0.0\n  Includes katapult {flashtool.get_version()}")
+    print(f"This is Kataflash v{util.get_version()}\n  Includes katapult {flashtool.get_version()}")
