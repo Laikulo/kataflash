@@ -36,6 +36,10 @@ Prints the version of kataflash, and the git hash of the embedded katapult flash
 
 NOTE: Printing the version of kataflash is not supported yet, and always prints 0.0.0
 
+#### `kataflash tool`
+Invokes the vendored flashtool.py with the provided arugments
+this is equivelant to running `kataflashtool`
+
 #### Following __NOT YET IMPLEMENTED__
 
 * `kataflash status` - Print the status of a given device
