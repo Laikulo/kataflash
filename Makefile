@@ -11,6 +11,6 @@ py: kataflash/upstream/flashtool.py kataflash/upstream/info.py
 
 kataflash/upstream/flashtool.py kataflash/upstream/info.py: upstream_ref.txt
 	curl -L -o kataflash/upstream/flashtool.py "https://github.com/$(KATAPULT_UPSTREAM)/raw/$(KATAPULT_REF)/scripts/flashtool.py"
-	echo "KATAPULT_UPSTREAM=\"$(KATAPULT_UPSTREAM)\"\nKATAPULT_REF=\"$(KATAPULT_REF)\"\n" > kataflash/upstream/info.py
+	echo -e "KATAPULT_UPSTREAM=\"$(KATAPULT_UPSTREAM)\"\nKATAPULT_REF=\"$(KATAPULT_REF)\"\n" > kataflash/upstream/info.py
 	
 .PHONY: all py
