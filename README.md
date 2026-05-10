@@ -32,13 +32,14 @@ This is kataflash's main entrypoint. It provides a few quality-of-life improveme
 
 #### `kataflash version`
 
-Prints the version of kataflash, and the git hash of the embedded katapult flashtook
+Prints the version of kataflash, and the git hash of the embedded katapult flashtool.
 
-NOTE: Printing the version of kataflash is not supported yet, and always prints 0.0.0
+NOTE: Printing the version of kataflash is not supported yet, and always prints 0.0.0.
 
 #### `kataflash tool`
-Invokes the vendored flashtool.py with the provided arugments
-this is equivelant to running `kataflashtool`
+Invokes the vendored flashtool.py with the provided arugments.
+
+this is equivelant to running `kataflashtool` with the same arguments.
 
 #### Following __NOT YET IMPLEMENTED__
 
