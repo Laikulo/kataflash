@@ -12,6 +12,11 @@ def main(args=None):
     sp_version = sp.add_parser("version")
     sp_version.set_defaults(action=cmd_version)
 
+    sp_tool = sp.add_parser("tool", add_help=False, prefix_chars='\x00')
+    sp_tool.add_argument("flashargs", nargs='*')
+    sp_tool.set_defaults(action=cmd_tool)
+    
+
     args = ap.parse_args(args=args)
     raise SystemExit(args.action(args))
 
@@ -32,3 +37,8 @@ def cmd_default(args):
 
 def cmd_version(args):
     print(f"This is Kataflash v{util.get_version()}\n  Includes katapult {flashtool.get_version()}")
+
+def cmd_tool(args):
+    print(args.flashargs)
+    flashtool.invoke_args(*args.flashargs)
+
