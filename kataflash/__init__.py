@@ -39,6 +39,5 @@ def cmd_version(args):
     print(f"This is Kataflash v{util.get_version()}\n  Includes katapult {flashtool.get_version()}")
 
 def cmd_tool(args):
-    print(args.flashargs)
     flashtool.invoke_args(*args.flashargs)
 
